@@ -52,13 +52,17 @@ interface SignUpCredentials extends AuthCredentials {
 }
 
 // Program types
+
 interface CreateProgramParams {
     title: string;
     description: string;
     categoryId: string;
     durationDays?: number;
-    isSelfPaced: boolean;
+    isSelfPaced?: boolean;
+    status?: 'active' | 'inactive';
+    startDate?: string;
 }
+
 
 interface UpdateProgramParams extends CreateProgramParams {
     programId: string;

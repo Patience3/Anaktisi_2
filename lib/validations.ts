@@ -101,7 +101,8 @@ export const CreateProgramSchema = z.object({
   description: z.string().min(10, "Description must be at least 10 characters"),
   categoryId: z.string().uuid("Valid category ID is required"),
   durationDays: z.number().int().positive().optional(),
-  isSelfPaced: z.boolean().default(false)
+  isSelfPaced: z.boolean().default(false),
+    isActive: z.boolean(), // <-- This is fine here
 });
 
 export const CreateModuleSchema = z.object({

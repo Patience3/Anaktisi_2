@@ -64,8 +64,7 @@ export async function signInWithCredentials(
     }
 }
 
-export async function createPatientAccount(
-    params: CreatePatientParams
+export async function createPatientAccount(params: CreatePatientParams
 ): Promise<ActionResponse<CreatePatientResponse>> {
     const validationResult = await action({
         params,
